@@ -1,0 +1,57 @@
+:root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html {
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+    background: #0d0818;
+}
+
+/* Səhifələr (hash ilə dəyişir) */
+.page {
+    display: none;
+}
+
+.page.on {
+    display: block;
+}
+
+/* Fonlar */
+.hero-bg {
+    background:
+        radial-gradient(circle at 70% 40%, #3a1d63 0, transparent 55%),
+        #0d0818;
+}
+
+.band {
+    background:
+        radial-gradient(circle at 85% 20%, #3a1d63, transparent 50%),
+        #1a1030;
+}
+
+/* Hero flakonunun yüngül hərəkəti */
+.float {
+    animation: fl 6s ease-in-out infinite;
+}
+
+@keyframes fl {
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .float {
+        animation: none;
+    }
+}
+
+:focus-visible {
+    outline: 2px solid #d9b46a;
+    outline-offset: 3px;
+}
